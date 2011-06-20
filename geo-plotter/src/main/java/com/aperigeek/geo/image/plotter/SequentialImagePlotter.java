@@ -15,40 +15,39 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.aperigeek.facebook.fmap.image;
+package com.aperigeek.geo.image.plotter;
 
 import com.aperigeek.geo.GeoLocation;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
  *
  * @author Vivien Barousse
  */
-public class CenteredImagePlotter extends ImagePlotter {
+public class SequentialImagePlotter extends ImagePlotter {
 
-    public CenteredImagePlotter(Projection projection) {
+    public SequentialImagePlotter(Projection projection) {
         super(projection);
     }
 
-    public CenteredImagePlotter(int width, int height) {
+    public SequentialImagePlotter(int width, int height) {
         super(width, height);
     }
     
-    public BufferedImage plot(GeoLocation center, Collection<GeoLocation> points,
-            Image background) {
-        
+    public BufferedImage plot(List<GeoLocation> points, Image background) {
         List<Line> lines = new ArrayList<Line>();
         
-        for (GeoLocation p : points) {
-            lines.add(new Line(center, p));
+        GeoLocation previous = points.get(0);
+        for (int i = 1; i < points.size(); i++) {
+            GeoLocation current = points.get(i);
+            lines.add(new Line(previous, current));
+            previous = current;
         }
         
         return plot(lines, background);
-        
     }
     
 }

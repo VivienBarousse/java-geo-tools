@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.aperigeek.facebook.fmap.image;
+package com.aperigeek.geo.image.plotter;
 
 /**
  *

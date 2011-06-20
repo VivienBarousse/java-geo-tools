@@ -15,10 +15,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.aperigeek.facebook.fmap.image.proj;
+package com.aperigeek.geo.image.plotter.proj;
 
-import com.aperigeek.facebook.fmap.image.BoundingBox;
-import com.aperigeek.facebook.fmap.image.Projection;
+import com.aperigeek.geo.image.plotter.BoundingBox;
+import com.aperigeek.geo.image.plotter.Projection;
 import com.aperigeek.geo.GeoLocation;
 
 /**

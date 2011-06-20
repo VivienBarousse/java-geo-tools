@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aperigeek.facebook.fmap.image;
+package com.aperigeek.geo.image.plotter;
 
-import com.aperigeek.facebook.fmap.image.proj.MercatorProjection;
+import com.aperigeek.geo.image.plotter.proj.MercatorProjection;
 import com.aperigeek.geo.GeoLocation;
 import java.awt.Color;
 import java.awt.Graphics;
